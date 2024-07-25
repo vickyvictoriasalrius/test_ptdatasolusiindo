@@ -1,0 +1,11 @@
+SELECT 
+    p.product_name,
+    c.category_name AS kategory_name,
+    s.sub_category_name AS sub_kategory_name,
+    p.price
+FROM 
+    Product p
+JOIN 
+    Sub_Category s ON p.sub_category_id = s.id
+JOIN 
+    Kategori c ON s.category_id = c.id;

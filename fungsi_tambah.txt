@@ -1,0 +1,15 @@
+
+<?php
+function tambah($start1, $start2, $count) {
+    $result = [$start1, $start2];
+    for ($i = 2; $i < $count; $i++) {
+        $next = $result[$i - 1] + $result[$i - 2];
+        $result[] = $next;
+    }
+    return $result;
+}
+
+// Contoh penggunaan
+print_r(tambah(5, 7, 4)); // output: 5 7 12 19
+print_r(tambah(1, 1, 5)); // output: 1 1 2 3 5
+?>
